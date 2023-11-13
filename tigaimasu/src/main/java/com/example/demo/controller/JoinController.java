@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class Joincontroller {
+public class JoinController {
 
 	@RequestMapping(path = "/join", method = RequestMethod.GET)
 	public String getJoinPage(Model model) {
