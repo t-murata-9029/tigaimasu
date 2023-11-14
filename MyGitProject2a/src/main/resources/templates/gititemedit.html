@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>しねかすども</h1>
+
+<form th:action="@{/changeinfo}" method="post" enctype="multipart/form-data" class = "form">
+
+<p>変更する商品の情報を入力してね</p>
+<p>おなまえ</p>
+<input type="text" name="itemName" id="itemName"> <br>
+<p>価格</p>
+<input type="text" name="itemPrice" id="itemPrice"><br>
+<button>変更</button>
+</form>
+
+</body>
+</html>
