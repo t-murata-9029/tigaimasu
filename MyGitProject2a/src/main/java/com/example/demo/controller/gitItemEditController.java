@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 @Controller
 public class gitItemEditController {
 
-	@RequestMapping(path = "/gititemedit", method = RequestMethod.GET)
+	@RequestMapping(path = "/	", method = RequestMethod.GET)
 	public String input1(HttpServletRequest request) {
 		return "gititemedit";
 	}
