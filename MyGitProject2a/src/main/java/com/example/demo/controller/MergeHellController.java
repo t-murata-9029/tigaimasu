@@ -1,13 +1,18 @@
 package com.example.demo.controller;
 
-<<<<<<< HEAD
 import java.util.Random;
 
 public class MergeHellController {
 	public static void main(String[] args) {
 		kadaiA();
 		kadaiB();
-		kadaiC();
+		//kadaiC();
+	}
+
+	static void kadaiA() {
+		for (int i = 0; i < 10; i++) {
+			System.out.println("現在" + i + "回目のループです");
+		}
 	}
 
 	// 1～100までのランダムな数字を抽出して○○が出たかどうかを表示するメソッド
@@ -34,27 +39,4 @@ public class MergeHellController {
 		}
 	}
 
-	// 他の課題に関するメソッドも追加可能
-	static void kadaiA() {
-		// ここに課題Aの処理を書く
-	}
-
-	static void kadaiC() {
-		// ここに課題Cの処理を書く
-	}
 }
-=======
-public class MergeHellController {
-	public static void main(String[] args) {
-		kadaiA();
-		kadaiB();
-		kadaiC();
-	}
-
-	static void kadaiA() {
-		for (int i = 0; i < 10; i++) {
-			System.out.println("現在" + i + "回目のループです");
-		}
-	}
-}
->>>>>>> branch 'master' of https://github.com/t-murata-9029/2a_framework_murata.git
