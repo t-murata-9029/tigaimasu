@@ -15,7 +15,7 @@ public class MergeHellController {
 		int randomNumber = RandomNumber(1, 100);
 
 		// ○○が出たかどうかを表示
-		DisplayResult(randomNumber, 42); // 42は仮の○○の値です。実際の値に置き換えてください。
+		DisplayResult(randomNumber, 77);
 	}
 
 	// 指定された範囲内のランダムな整数を生成するメソッド
