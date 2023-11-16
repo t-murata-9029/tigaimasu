@@ -6,20 +6,20 @@
 </head>
 <body>
 
-<h2>Follow List</h2>
+<h2>Followers List</h2>
 
 <ul>
     <!-- フォロワー一覧を表示 -->
-    <li th:each="follows : ${follow}">
+    <li th:each="followers : ${followers}">
         <!-- 各ユーザーの情報を表示 -->
         <div>
-            <span th:text="${follows.username}"></span>
+            <span th:text="${followers.username}"></span>
         </div>
         <div>
-            <img th:src="${follows.profileImageUrl}" alt="UserImage"/>
+            <img th:src="${followers.profileImageUrl}" alt="UserImage"/>
         </div>
         <div>
-            <p th:text="${follows.comment}"></p>
+            <p th:text="${followers.comment}"></p>
         </div>
     </li>
 </ul>

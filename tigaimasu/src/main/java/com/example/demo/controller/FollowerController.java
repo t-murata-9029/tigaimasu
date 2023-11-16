@@ -8,17 +8,17 @@ package com.example.demo.controller;
 ////import org.springframework.web.bind.annotation.GetMapping;
 //
 //@Controller
-public class FollowController {
+public class FollowerController {
 
 	//	@Autowired
 	//	private UserService userService;
 	//
-	//	@GetMapping("/follows-list")
-	//	public String showFollowsList(Model model) {
+	//	@GetMapping("/follower-list")
+	//	public String showFollowerList(Model model) {
 	//		// 現在のユーザーのフォロワー一覧をDBから取得
-	//		List<User> follows = userService.getCurrentUsersFollows();
+	//		List<User> followers = userService.getCurrentUsersFollowers();
 	//
-	//		model.addAttribute("follows", follows);
-	//		return "follows-list";
+	//		model.addAttribute("followers", followers);
+	//		return "followers-list";
 	//	}
 }
