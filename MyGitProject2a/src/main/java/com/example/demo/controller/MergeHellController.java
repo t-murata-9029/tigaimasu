@@ -7,8 +7,6 @@ public class MergeHellController {
 		kadaiA();
 		kadaiB();
 		//kadaiC();
-<<<<<<< HEAD
-=======
 	}
 
 	void kadaiC() {
@@ -18,7 +16,6 @@ public class MergeHellController {
 		c = a + b;
 		System.out.println(c);
 
->>>>>>> branch 'master' of https://github.com/t-murata-9029/2a_framework_murata.git
 	}
 
 	static void kadaiA() {
@@ -27,22 +24,6 @@ public class MergeHellController {
 		}
 	}
 
-<<<<<<< HEAD
-	static void kadaiB() {
-		Random rnd = new Random();
-		System.out.println(rnd.nextInt() % 100 + 1 + "がでました。");
-	}
-
-	static void kadaiC() {
-		int a = 50;
-		int b = 75;
-
-		int c = a + b;
-
-		System.out.println(c);
-	}
-}
-=======
 	// 1～100までのランダムな数字を抽出して○○が出たかどうかを表示するメソッド
 	static void kadaiB() {
 		// ランダムな数字を生成
@@ -67,4 +48,3 @@ public class MergeHellController {
 		}
 	}
 }
->>>>>>> branch 'master' of https://github.com/t-murata-9029/2a_framework_murata.git
