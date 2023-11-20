@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SNSホーム</title>
+    <!-- ここに必要なCSSファイルのリンクやスタイルを追加 -->
+    <style>
+        /* スタイルは適宜追加してください */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* 他のスタイルも追加 */
+    </style>
+</head>
+<body>
+
+<!-- ヘッダー部分 -->
+<header>
+    <!-- メニューボタン -->
+    <div id="menuButton">
+        <!-- 左から押すとプルダウンで表示されるメニュー -->
+        <ul>
+            <!-- メニュー項目を追加 -->
+        </ul>
+    </div>
+
+    <!-- ユーザーアイコン -->
+    <div id="userIcon" onclick="goToUserHome()">
+        <!-- ログイン中のユーザーのアイコン -->
+        <img src="path/to/user/icon.jpg" alt="User Icon">
+    </div>
+
+    <!-- ホームボタン -->
+    <div id="homeButton" onclick="goToUserPage()">
+        <button>ホーム</button>
+    </div>
+</header>
+
+<!-- メインコンテンツ -->
+<main>
+    <!-- 参加済みのルーム一覧 -->
+    <div id="joinedRooms">
+        <h3>参加済みのルーム一覧</h3>
+        <ul>
+            <!-- ルームを表示 -->
+        </ul>
+    </div>
+
+    <!-- 現在開いているルームの会話 -->
+    <div id="currentRoomConversation">
+        <h2>現在のルーム</h2>
+        <div id="conversation">
+            <!-- ルーム会話の表示 -->
+             </div>
+    </div>
+</main>
+
+<!-- 右サイドバー -->
+<aside>
+    <!-- 人気ルーム -->
+    <div id="popularRooms">
+        <h3>人気ルーム</h3>
+        <ul>
+            <!-- 人気ルームを追加 -->
+        </ul>
+    </div>
+
+    <!-- おすすめ -->
+    <div id="recommended">
+        <h3>おすすめ</h3>
+        <ul>
+            <!-- おすすめを追加 -->
+        </ul>
+    </div>
+
+    <!-- 人気の開催者 -->
+    <div id="popularHosts">
+        <h3>人気の開催者</h3>
+        <ul>
+            <!-- 開催者を追加 -->
+        </ul>
+    </div>
+</aside>
+
+</body>
+</html>

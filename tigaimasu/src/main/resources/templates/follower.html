@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Follow List</title>
+</head>
+<body>
+
+<h2>Followers List</h2>
+
+<ul>
+    <!-- フォロワー一覧を表示 -->
+    <li th:each="followers : ${followers}">
+        <!-- 各ユーザーの情報を表示 -->
+        <div>
+            <span th:text="${followers.username}"></span>
+        </div>
+        <div>
+            <img th:src="${followers.profileImageUrl}" alt="UserImage"/>
+        </div>
+        <div>
+            <p th:text="${followers.comment}"></p>
+        </div>
+    </li>
+</ul>
+
+</body>
+</html>
