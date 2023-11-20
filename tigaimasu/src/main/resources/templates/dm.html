@@ -2,24 +2,32 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>DM List</title>
+    <title>DM</title>
 </head>
 <body>
 
-<h2>DM List</h2>
+<h2>ダイレクトメッセージ</h2>
 
-<ul>
-    <!-- フォロワー一覧を表示 -->
-    <li th:each="dms : ${dm}">
-        <!-- 各ユーザーの情報を表示 -->
-        <div>
-            <span th:text="${dms.username}"></span>
-        </div>
-        <div>
-            <img th:src="${dms.profileImageUrl}" alt="UserImage"/>
-        </div>
-    </li>
-</ul>
+<!-- 相手の名前を表示 -->
+<div>
+    <h3 th:text="${partnerName}"></h3>
+</div>
+
+<!-- 会話を表示 -->
+<div id="conversation">
+    <!-- データベースからのメッセージを表示するためのThymeleaf -->
+    <div th:each="message : ${messages}">
+        <p th:text="${message.content}"></p>
+    </div>
+</div>
+
+<!-- メッセージを送信するための入力フォーム -->
+<div>
+    <form id="messageForm" th:action="@{/sendMessage}" method="post">
+        <input type="text" id="messageInput" name="messageInput" placeholder="メッセージを入力してください..." required>
+        <button type="submit">送信</button>
+    </form>
+</div>
 
 </body>
 </html>

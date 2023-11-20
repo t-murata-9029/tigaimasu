@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>DM List</title>
+</head>
+<body>
+
+<h2>DM List</h2>
+
+<ul>
+    <!-- フォロワー一覧を表示 -->
+    <li th:each="dms : ${dm}">
+        <!-- 各ユーザーの情報を表示 -->
+        <div>
+            <span th:text="${dms.username}"></span>
+        </div>
+        <div>
+            <img th:src="${dms.profileImageUrl}" alt="UserImage"/>
+        </div>
+    </li>
+</ul>
+
+</body>
+</html>
