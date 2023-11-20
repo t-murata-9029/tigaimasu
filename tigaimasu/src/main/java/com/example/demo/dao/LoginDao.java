@@ -10,8 +10,7 @@ public class LoginDao {
 
 	/*LoginDaoでDBアクセスしてデータ取ってくる。*/
 	public String getUserInfo() {
-		JdbcTemplate jdbcTemplate = new JdbcTemplate() {
-		};
+		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 
 		String sql = "SELECT * FROM users WHERE user_id = 'sample_id'";
 
