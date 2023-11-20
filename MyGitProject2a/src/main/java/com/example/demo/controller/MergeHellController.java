@@ -46,5 +46,9 @@ public class MergeHellController {
 		} else {
 			System.out.println(target + "は出ませんでした。");
 		}
-	}
-}
+	}}
+
+}>>>>>>>branch'master'
+
+of https:
+//github.com/t-murata-9029/2a_framework_murata.git
