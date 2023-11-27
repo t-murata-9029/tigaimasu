@@ -37,8 +37,7 @@ public class LoginController {
 	@RequestMapping(path = "/logincheck", method = RequestMethod.POST)
 	public String input2(HttpServletRequest request, String userId, String userPassward) {
 
-		/*DB接続してuserIdとuserPassward正しいかチェック(Serviceのメソッドで)*/
-		/*正しかったらホーム画面のURLたたいてあげる*/
+		/*ホーム画面のURLたたく*/
 		/*間違ってたらエラーメッセージ表示*/
 
 		return "hogehogehoge";
