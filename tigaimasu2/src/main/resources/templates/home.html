@@ -61,7 +61,24 @@
     <div id="popularRooms">
         <h3>人気ルーム</h3>
         <ul>
-            <!-- 人気ルームを追加 -->
+            <!-- 人気ルームを追加
+            Table: room_participants
+            Columns:room_participants_id varchar(10) PK 
+            room_id varchar(10) 
+            user_id varchar(10) 
+            approval bit(1)
+            このDBからroom_idが同じuser_idの数を算出し、その数が多い上位３つのroom_idと同じデータを
+            Table: room
+            Columns:id int PK 
+            room_name varchar(20) 
+            user_id varchar(10) 
+            time date 
+            site varchar(24) 
+            random_bit bit(1) 
+            approval_bit bit(1)
+            から参照。その結果のルームのroom_nameを取得、表示する
+ 
+             -->
         </ul>
     </div>
 
@@ -77,7 +94,16 @@
     <div id="popularHosts">
         <h3>人気の開催者</h3>
         <ul>
-            <!-- 開催者を追加 -->
+            <!-- 開催者を追加 
+            DBname:chun
+            Table: users
+            Columns:user_evaluation intからユーザー評価の一覧を取得し、
+            そのなかから数字が多い上位３名を表示するもし評価値が同じ場合
+            DBname:chun
+            Table: users
+            Columns：user_id varchar(10) PKを参照し、その数字が小さい順に表示する。
+            -->
+            
         </ul>
     </div>
 </aside>
