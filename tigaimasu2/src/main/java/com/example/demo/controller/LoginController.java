@@ -25,8 +25,7 @@ public class LoginController {
 	@RequestMapping(path = "/login", method = RequestMethod.POST)
 	public String input2(HttpServletRequest request, String userId, String userPassword) {
 
-		/*DB接続してuserIdとuserPassward正しいかチェック(Serviceのメソッドで)*/
-		/*正しかったらホーム画面のURLたたいてあげる*/
+		/*ホーム画面のURLたたく*/
 		/*間違ってたらエラーメッセージ表示*/
 		LoginService loginService = new LoginService();
 		Boolean loginresult = loginService.LoginCheck(userId, userPassword, jdbcTemplate);
