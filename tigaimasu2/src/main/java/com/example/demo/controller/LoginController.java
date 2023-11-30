@@ -1,8 +1,5 @@
 package com.example.demo.controller;
 
-import java.util.Map;
-import java.util.Map.Entry;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
@@ -21,26 +18,25 @@ public class LoginController {
 
 	@RequestMapping(path = "/login", method = RequestMethod.GET)
 	public String input1(HttpServletRequest request) {
-		String sql = "SELECT * FROM users WHERE user_id = 'sample_id'";
 
-		Map<String, Object> oneUser = jdbcTemplate.queryForMap(sql);
-
-		for (Entry<String, Object> a : oneUser.entrySet()) {
-			System.out.println(a.getValue());
-		}
-
-		LoginService loginService = new LoginService();
-		loginService.LoginCheck(null, null);
 		return "login";
 	}
 
-	@RequestMapping(path = "/logincheck", method = RequestMethod.POST)
-	public String input2(HttpServletRequest request, String userId, String userPassward) {
+	@RequestMapping(path = "/login", method = RequestMethod.POST)
+	public String input2(HttpServletRequest request, String userId, String userPassword) {
 
 		/*DB接続してuserIdとuserPassward正しいかチェック(Serviceのメソッドで)*/
 		/*正しかったらホーム画面のURLたたいてあげる*/
 		/*間違ってたらエラーメッセージ表示*/
+		LoginService loginService = new LoginService();
+		Boolean loginresult = loginService.LoginCheck(userId, userPassword, jdbcTemplate);
 
-		return "hogehogehoge";
+		if (loginresult) {
+			System.out.println("YES");
+		} else {
+			System.out.println("NO");
+		}
+
+		return "login";
 	}
 }

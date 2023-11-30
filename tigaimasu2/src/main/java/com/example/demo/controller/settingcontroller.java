@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class settingcontroller {
 
-	@RequestMapping(path = "/join", method = RequestMethod.GET)
+	@RequestMapping(path = "/setting", method = RequestMethod.GET)
 	public String getJoinPage(Model model) {
 		return "join";
 	}
 
-	@RequestMapping(path = "/submit", method = RequestMethod.POST)
+	@RequestMapping(path = "/submitsetting", method = RequestMethod.POST)
 	public String submitForm(
 			@RequestParam("username") String username,
 			@RequestParam("email") String email,
