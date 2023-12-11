@@ -2,30 +2,42 @@
 <html>
 <head>
     <meta charset="UTF-8">
-      <link rel="stylesheet" type="text/css" href="/css/login.css" />
     <title>join</title>
- 
 </head>
 <body>
-	<div class="a"></div>
-	<h3 class="a2"> </h3>
-	<div class="main">
-    <h1>新規会員登録</h1>
-      <form action="/roomcreate" method="post">
-        <label for="roomname">ルーム名:</label>
-        <input type="text" id="roomname" name="roomname" required>
-
-        <label for="venue">開催地:</label>
-        <input type="text" id="venue" name="venue" required>
-
-        <label for="datetime">開催日:</label>
-        <input type="datetime-local" id="datetime" name="datetime" required>
-        
-        <label for="comment">コメント:</label>
-        <input type="text" id="comment" name="comment" >
-        
-        <button type="submit">ルームを作成する</button>
-    </form>
-     </div>
+    <div class="a"></div>
+    <h3 class="a2"> </h3>
+    <div class="main">
+        <h1>ルーム作成</h1>
+        <form action="/roomcreate" method="post">
+            <label for="roomname">ルーム名:</label>
+            <input type="text" id="roomname" name="room_name" required><br>
+            
+            <label for="venue">開催地:</label>
+            <input type="text" id="site" name="site" required><br>
+            
+            <label for="time">開催日:</label>
+            <input type="date" id="time" name="time" required><br>
+            
+            <label for="introduction">コメント:</label>
+            <input type="text" id="introduction" name="introduction"><br>
+            
+            <!-- ランダム参加の許可 -->
+            <label for="random_bit">ランダム参加の許可:</label>
+            <select id="random_bit" name="random_bit" required>
+                <option value="1">はい</option>
+                <option value="0">いいえ</option>
+            </select><br>
+            
+            <!-- ルームを承認制にするか -->
+            <label for="approval_bit">ルームを承認制にするか:</label>
+            <select id="approval_bit" name="approval_bit" required>
+                <option value="1">はい</option>
+                <option value="0">いいえ</option>
+            </select><br>
+ 
+            <button type="submit">ルームを作成する</button>
+        </form>
+    </div>
 </body>
 </html>
