@@ -3,14 +3,14 @@ package com.example.demo.entity;
 import java.util.Date;
 
 public class room {
-	private int id;
-	private String room_name;
-	private String introduction;
-	private String user_id;
-	private Date time;
-	private String site;
-	private int random_bit;
-	private int approval_bit;
+	int id;
+	String room_name;
+	String introduction;
+	String user_id;
+	Date time;
+	String site;
+	int random_bit;
+	int approval_bit;
 
 	public int getId() {
 		return id;

@@ -2,9 +2,9 @@ package com.example.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-@Repository //もしかしたらサービスかも？？
+@Service //もしかしたらサービスかも？？
 public class getJDBC {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
@@ -12,4 +12,5 @@ public class getJDBC {
 	public JdbcTemplate getJdbcTemplate() {
 		return this.jdbcTemplate;
 	}
+
 }

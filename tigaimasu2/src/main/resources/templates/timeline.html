@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Timeline</title>
+</head>
+<body>
+
+<h1>Timeline</h1>
+
+<!-- 投稿一覧 -->
+<div th:if="${posts}">
+    <h2>Post List</h2>
+    <ul>
+        <li th:each="post : ${posts}">
+            <p th:text="${post.user_id} + ': ' + ${post.post} + ' (' + ${post.timestamps} + ')'"></p>
+        </li>
+    </ul>
+</div>
+
+<!-- ナイス一覧 -->
+<div th:if="${niceList}">
+    <h2>Nice List</h2>
+    <ul>
+        <li th:each="nice : ${niceList}">
+            <p th:text="${nice.user_id} liked post with id ${nice.post_id}"></p>
+        </li>
+    </ul>
+</div>
+
+<!-- 新規投稿フォーム -->
+<form action="/addPost" method="post">
+    <label for="user_id">User ID:</label>
+    <input type="text" id="user_id" name="user_id" required>
+    <br>
+    <label for="post">Post:</label>
+    <textarea id="post" name="post" required></textarea>
+    <br>
+    <label for="stamp">Stamp:</label>
+    <input type="text" id="stamp" name="stamp" required>
+    <br>
+    <button type="submit">Add Post</button>
+</form>
+
+<!-- ナイス追加フォーム -->
+<form action="/addNice" method="post">
+    <label for="userId">User ID:</label>
+    <input type="text" id="userId" name="userId" required>
+    <br>
+    <label for="postId">Post ID:</label>
+    <input type="text" id="postId" name="postId" required>
+    <br>
+    <button type="submit">Add Nice</button>
+</form>
+
+</body>
+</html>
