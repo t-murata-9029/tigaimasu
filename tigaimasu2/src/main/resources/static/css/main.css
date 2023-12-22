@@ -1,0 +1,103 @@
+@charset "UTF-8";
+* {
+   box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    padding: 30px 4% 10px;
+    background-color: #fff;
+	/*これを使うとスクロールしてもヘッダーついてくる*/
+	/*position: fixed;*/
+   	top: 0;
+	display: flex;
+   	align-items: center;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   background-color: #e6e6e6;
+}
+
+h1 {
+   margin: 0; padding: 0;
+   font-size: 20px;
+}
+
+a {	
+   text-decoration: none;
+   color: #4b4b4b;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   display: flex;
+}
+
+li {
+   margin: 0 0 0 15px;
+   font-size: 14px;
+}
+
+nav {
+   margin: 0 0 0 auto;
+}
+
+.maimBody{
+ 
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.contents{
+	flex-grow: 2;
+	 margin:  0 auto; 
+	 padding-left: 100px;
+}
+
+.leftMenu{
+	background-color: red;
+	width:20%;
+	height: auto;
+}
+.rightMenu{
+	background-color: green;
+	width: 20%;
+}
+
+.textbox {
+    width:40;
+    padding: 8px 10px;
+    border: 1px solid #d2d2d2;
+    border-radius: 25px;
+    background: #f7f7f7;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.textbox::placeholder {
+    color: #999;
+}
+
+.button {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid #2589d0;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2589d0;
+    font-size: 100%;
+    
+}
+
+.button:hover {
+    border: none;
+    background-color: #2589d0;
+    color: #fff;
+    font-weight: 600;
+}

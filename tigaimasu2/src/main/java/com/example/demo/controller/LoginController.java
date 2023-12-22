@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,33 +8,34 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.example.demo.service.LoginService;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class LoginController {
 
 	@Autowired
-	JdbcTemplate jdbcTemplate;
+	LoginService loginService;
 
 	@RequestMapping(path = "/login", method = RequestMethod.GET)
-	public String input1(HttpServletRequest request) {
-
+	public String loginGet(HttpServletRequest request) {
 		return "login";
 	}
 
 	@RequestMapping(path = "/login", method = RequestMethod.POST)
-	public String input2(HttpServletRequest request, String userId, String userPassword) {
+	public String loginPost(HttpServletRequest request, String userId, String userPassword, HttpSession session)
+			throws Exception {
 
 		/*ホーム画面のURLたたく*/
 		/*間違ってたらエラーメッセージ表示*/
-		LoginService loginService = new LoginService();
-		Boolean loginresult = loginService.LoginCheck(userId, userPassword, jdbcTemplate);
+		Boolean loginresult = loginService.LoginCheck(userId, userPassword);
 
+		/*一致するユーザーIDとパスワードがあったらhomeに遷移*/
 		if (loginresult) {
-			System.out.println("YES");
+			session.setAttribute("userId", userId);
+			return "login";
 		} else {
-			System.out.println("NO");
+			return "login";
 		}
 
-		return "login";
 	}
 }
