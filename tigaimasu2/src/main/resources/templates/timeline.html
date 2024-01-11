@@ -13,12 +13,13 @@
     <h2>Post List</h2>
     <ul>
         <li th:each="post : ${posts}">
-            <p th:text="${post.user_id} + ': ' + ${post.post} + ' (' + ${post.timestamps} + ')'"></p>
+            <p th:text="'#'+ ${post.id}+'.' + ${post.user_id} + ': ' + ${post.post} + '/'+ ${post.stamp} +' (' + ${post.timestamps} + ')'"></p>
         </li>
     </ul>
 </div>
 
-<!-- ナイス一覧 -->
+<!--
+ ナイス一覧 
 <div th:if="${niceList}">
     <h2>Nice List</h2>
     <ul>
@@ -27,6 +28,8 @@
         </li>
     </ul>
 </div>
+-->
+
 
 <!-- 新規投稿フォーム -->
 <form action="/addPost" method="post">
@@ -39,10 +42,11 @@
     <label for="stamp">Stamp:</label>
     <input type="text" id="stamp" name="stamp" required>
     <br>
+    
     <button type="submit">Add Post</button>
 </form>
 
-<!-- ナイス追加フォーム -->
+<!-- ナイス追加フォーム 
 <form action="/addNice" method="post">
     <label for="userId">User ID:</label>
     <input type="text" id="userId" name="userId" required>
@@ -51,6 +55,7 @@
     <input type="text" id="postId" name="postId" required>
     <br>
     <button type="submit">Add Nice</button>
+    -->
 </form>
 
 </body>
